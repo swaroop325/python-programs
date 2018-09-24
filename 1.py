@@ -1,3 +1,3 @@
-n=input("enter name")
+n=input()
 
 print(n+'.')
