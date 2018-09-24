@@ -1,12 +1,12 @@
-str=input()
 def most_repeated_letters(word_1):
-  x = 0
-  z = 0
-  for letter in word_1:
-    y = word_1.count(letter[0:])
-    if y > z:
-      z = y
-    x += 1
-    return z
+    lettersCount = {}
+    for ch in word_1:
+        if ch not in lettersCount:
+            lettersCount[ch] = 1
+        else:
+            lettersCount[ch] += 1
 
-print most_repeated_letters('str')
+    return max(lettersCount, key=lettersCount.get)
+
+str=input()
+print most_repeated_letters(str)
